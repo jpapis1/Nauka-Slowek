@@ -1,13 +1,13 @@
 @extends('layout.app')
 @section('customCSS')
-    <link rel="stylesheet" type="text/css" href="/projekt/public/css/main.css">
+    <link rel="stylesheet" type="text/css" href="/css/main.css">
 @endsection
 @section('content')
 
     <body>
     {{ csrf_field() }}
     <nav class="navbar navbar-expand-md navbar-dark bg-dark fixed-top">
-        <a class="navbar-brand" href="/projekt/public">Nauka Słówek</a>
+        <a class="navbar-brand" href="">Nauka Słówek</a>
         <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarsExampleDefault" aria-controls="navbarsExampleDefault" aria-expanded="false" aria-label="Toggle navigation">
             <span class="navbar-toggler-icon"></span>
         </button>
@@ -19,10 +19,10 @@
                 <form class="form-inline my-2 my-lg-0">
                     <ul class="navbar-nav mr-auto">
                         <li class="nav-item">
-                            <a class="nav-link" href="/projekt/public/profile">{{'Profil ' . session('loggedUser')->login}}</a>
+                            <a class="nav-link" href="/profile">{{'Profil ' . session('loggedUser')->login}}</a>
                         </li>
                         <li class="nav-item">
-                            <a class="nav-link" href="/projekt/public/logout">Wyloguj się</a>
+                            <a class="nav-link" href="/logout">Wyloguj się</a>
                         </li>
 
                     </ul>
@@ -31,10 +31,10 @@
                 <form class="form-inline my-2 my-lg-0">
                     <ul class="navbar-nav mr-auto">
                         <li class="nav-item">
-                            <a class="nav-link" href="/projekt/public/register">Zarejestruj się</a>
+                            <a class="nav-link" href="/register">Zarejestruj się</a>
                         </li>
                         <li class="nav-item">
-                            <a class="nav-link" href="/projekt/public/login">Zaloguj się</a>
+                            <a class="nav-link" href="/login">Zaloguj się</a>
                         </li>
 
                     </ul>
@@ -65,7 +65,7 @@
                         </div>
                         <div class="row">
                             <div class="col-xs-12 col-xl-12 item">
-                                <a href="/projekt/public/category/{{$data['kategoria']}}/{{$data['podkategoria']}}/{{$data['zestaw']}}/learning/{{$data['lang1']->id}}/{{$data['lang2']->id}}/1" class="btn btn-primary btn-block" role="button">Wymieszaj słówka, pytaj się dokładnie 1 raz
+                                <a href="/category/{{$data['kategoria']}}/{{$data['podkategoria']}}/{{$data['zestaw']}}/learning/{{$data['lang1']->id}}/{{$data['lang2']->id}}/1" class="btn btn-primary btn-block" role="button">Wymieszaj słówka, pytaj się dokładnie 1 raz
                                 </a>
                             </div>
 
@@ -73,13 +73,13 @@
                         <p></p>
                         <div class="row">
                             <div class="col-xs-12 col-xl-12 item">
-                                <a href="/projekt/public/category/{{$data['kategoria']}}/{{$data['podkategoria']}}/{{$data['zestaw']}}/learning/{{$data['lang1']->id}}/{{$data['lang2']->id}}/2" class="btn btn-primary btn-block" role="button">Wymieszaj słówka, pytaj się do poprawnej odpowiedzi</a>
+                                <a href="/category/{{$data['kategoria']}}/{{$data['podkategoria']}}/{{$data['zestaw']}}/learning/{{$data['lang1']->id}}/{{$data['lang2']->id}}/2" class="btn btn-primary btn-block" role="button">Wymieszaj słówka, pytaj się do poprawnej odpowiedzi</a>
                             </div>
                         </div>
                         <p></p>
                         <div class="row">
                             <div class="col-xs-12 col-xl-12 item">
-                                <a href="/projekt/public/category/{{$data['kategoria']}}/{{$data['podkategoria']}}/{{$data['zestaw']}}/learning/{{$data['lang1']->id}}/{{$data['lang2']->id}}/3" class="btn btn-primary btn-block" role="button">Sortuj alfabetyczne, pytaj się dokładnie 1 raz</a>
+                                <a href="/category/{{$data['kategoria']}}/{{$data['podkategoria']}}/{{$data['zestaw']}}/learning/{{$data['lang1']->id}}/{{$data['lang2']->id}}/3" class="btn btn-primary btn-block" role="button">Sortuj alfabetyczne, pytaj się dokładnie 1 raz</a>
                             </div>
                         </div>
                         <p></p>
@@ -91,7 +91,7 @@
                         </div>
                         <div class="row">
                             <div class="col-xs-12 col-xl-12 item">
-                                <a href="/projekt/public/category/{{$data['kategoria']}}/{{$data['podkategoria']}}/{{$data['zestaw']}}/learning/{{$data['lang2']->id}}/{{$data['lang1']->id}}/1" class="btn btn-primary btn-block" role="button">Wymieszaj słówka, pytaj się dokładnie 1 raz
+                                <a href="/category/{{$data['kategoria']}}/{{$data['podkategoria']}}/{{$data['zestaw']}}/learning/{{$data['lang2']->id}}/{{$data['lang1']->id}}/1" class="btn btn-primary btn-block" role="button">Wymieszaj słówka, pytaj się dokładnie 1 raz
                                 </a>
                             </div>
 
@@ -100,13 +100,13 @@
                         <p></p>
                         <div class="row">
                             <div class="col-xs-12 col-xl-12 item">
-                                <a href="/projekt/public/category/{{$data['kategoria']}}/{{$data['podkategoria']}}/{{$data['zestaw']}}/learning/{{$data['lang2']->id}}/{{$data['lang1']->id}}/2" class="btn btn-primary btn-block" role="button">Wymieszaj słówka, pytaj się do poprawnej odpowiedzi</a>
+                                <a href="/category/{{$data['kategoria']}}/{{$data['podkategoria']}}/{{$data['zestaw']}}/learning/{{$data['lang2']->id}}/{{$data['lang1']->id}}/2" class="btn btn-primary btn-block" role="button">Wymieszaj słówka, pytaj się do poprawnej odpowiedzi</a>
                             </div>
                         </div>
                         <p></p>
                         <div class="row">
                             <div class="col-xs-12 col-xl-12 item">
-                                <a href="/projekt/public/category/{{$data['kategoria']}}/{{$data['podkategoria']}}/{{$data['zestaw']}}/learning/{{$data['lang2']->id}}/{{$data['lang1']->id}}/3" class="btn btn-primary btn-block" role="button">Sortuj alfabetyczne, pytaj się dokładnie 1 raz</a>
+                                <a href="/category/{{$data['kategoria']}}/{{$data['podkategoria']}}/{{$data['zestaw']}}/learning/{{$data['lang2']->id}}/{{$data['lang1']->id}}/3" class="btn btn-primary btn-block" role="button">Sortuj alfabetyczne, pytaj się dokładnie 1 raz</a>
                             </div>
                         </div>
                         <p></p>
@@ -121,7 +121,7 @@
                             <h5>Z języka {{$data['lang1']->nazwa}}->{{$data['lang2']->nazwa}}</h5>
                         </div>
                         <div class="col-xs-12 col-xl-12 item">
-                            <a href="/projekt/public/category/{{$data['kategoria']}}/{{$data['podkategoria']}}/{{$data['zestaw']}}/testing/{{$data['lang1']->id}}/{{$data['lang2']->id}}/1" class="btn btn-primary btn-block" role="button">Wymieszaj słówka, pytaj się dokładnie 1 raz
+                            <a href="/category/{{$data['kategoria']}}/{{$data['podkategoria']}}/{{$data['zestaw']}}/testing/{{$data['lang1']->id}}/{{$data['lang2']->id}}/1" class="btn btn-primary btn-block" role="button">Wymieszaj słówka, pytaj się dokładnie 1 raz
                             </a>
                         </div>
                         <p></p>
@@ -129,7 +129,7 @@
                             <h5>Z języka {{$data['lang2']->nazwa}}->{{$data['lang1']->nazwa}}</h5>
                         </div>
                         <div class="col-xs-12 col-xl-12 item">
-                            <a href="/projekt/public/category/{{$data['kategoria']}}/{{$data['podkategoria']}}/{{$data['zestaw']}}/testing/{{$data['lang2']->id}}/{{$data['lang1']->id}}/1" class="btn btn-primary btn-block" role="button">Wymieszaj słówka, pytaj się dokładnie 1 raz
+                            <a href="/category/{{$data['kategoria']}}/{{$data['podkategoria']}}/{{$data['zestaw']}}/testing/{{$data['lang2']->id}}/{{$data['lang1']->id}}/1" class="btn btn-primary btn-block" role="button">Wymieszaj słówka, pytaj się dokładnie 1 raz
                             </a>
                         </div>
 

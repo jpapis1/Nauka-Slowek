@@ -1,6 +1,6 @@
 @extends('layout.app')
 @section('customCSS')
-    <link rel="stylesheet" type="text/css" href="/projekt/public/css/main.css">
+    <link rel="stylesheet" type="text/css" href="/css/main.css">
 @endsection
 @section('content')
 
@@ -13,10 +13,10 @@
             <form class="form-inline my-2 my-lg-0">
                 <ul class="navbar-nav mr-auto">
                     <li class="nav-item">
-                        <a class="nav-link" href="/projekt/public/profile">{{'Profil ' . session('loggedUser')->login}}</a>
+                        <a class="nav-link" href="/profile">{{'Profil ' . session('loggedUser')->login}}</a>
                     </li>
                     <li class="nav-item">
-                        <a class="nav-link" href="/projekt/public/logout">Wyloguj się</a>
+                        <a class="nav-link" href="/logout">Wyloguj się</a>
                     </li>
 
                 </ul>
@@ -25,10 +25,10 @@
             <form class="form-inline my-2 my-lg-0">
                 <ul class="navbar-nav mr-auto">
                     <li class="nav-item">
-                        <a class="nav-link" href="/projekt/public/register">Zarejestruj się</a>
+                        <a class="nav-link" href="/register">Zarejestruj się</a>
                     </li>
                     <li class="nav-item">
-                        <a class="nav-link" href="/projekt/public/login">Zaloguj się</a>
+                        <a class="nav-link" href="/login">Zaloguj się</a>
                     </li>
 
                 </ul>

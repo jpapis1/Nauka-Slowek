@@ -1,6 +1,6 @@
 @extends('layout.app')
 @section('customCSS')
-    <link rel="stylesheet" type="text/css" href="/projekt/public/css/main.css">
+    <link rel="stylesheet" type="text/css" href="/css/main.css">
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
     <script src="https://cdnjs.cloudflare.com/ajax/libs/Chart.js/2.4.0/Chart.min.js">
         function beforePrintHandler () {
@@ -16,7 +16,7 @@
     <body>
 
     <nav class="navbar navbar-expand-md navbar-dark bg-dark fixed-top">
-        <a class="navbar-brand" href="/projekt/public">Nauka Słówek</a>
+        <a class="navbar-brand" href="">Nauka Słówek</a>
         <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarsExampleDefault" aria-controls="navbarsExampleDefault" aria-expanded="false" aria-label="Toggle navigation">
             <span class="navbar-toggler-icon"></span>
         </button>
@@ -28,10 +28,10 @@
                 <form class="form-inline my-2 my-lg-0">
                     <ul class="navbar-nav mr-auto">
                         <li class="nav-item">
-                            <a class="nav-link" href="/projekt/public/profile">{{'Profil ' . session('loggedUser')->login}}</a>
+                            <a class="nav-link" href="/profile">{{'Profil ' . session('loggedUser')->login}}</a>
                         </li>
                         <li class="nav-item">
-                            <a class="nav-link" href="/projekt/public/logout">Wyloguj się</a>
+                            <a class="nav-link" href="/logout">Wyloguj się</a>
                         </li>
 
                     </ul>
@@ -40,10 +40,10 @@
                 <form class="form-inline my-2 my-lg-0">
                     <ul class="navbar-nav mr-auto">
                         <li class="nav-item">
-                            <a class="nav-link" href="/projekt/public/register">Zarejestruj się</a>
+                            <a class="nav-link" href="/register">Zarejestruj się</a>
                         </li>
                         <li class="nav-item">
-                            <a class="nav-link" href="/projekt/public/login">Zaloguj się</a>
+                            <a class="nav-link" href="/login">Zaloguj się</a>
                         </li>
 
                     </ul>
@@ -193,16 +193,16 @@
                         @if((session()->get('loggedUser')->rola_id==1)||
                         ((session()->get('loggedUser')->rola_id==2)&&($data['canCreate']==true))||
                         ((session()->get('loggedUser')->rola_id==3)&&($zestaw->konto_id==session()->get('loggedUser')->id)))
-                        <a style="text-decoration:none;" href="/projekt/public/crud/category/{{$data['kategoria']}}/delete/{{$zestaw->id}}" title="Usuń rekord" data-toggle="popover" data-trigger="hover" data-content="Ten rekord będzie usunięty z bazy danych!">
+                        <a style="text-decoration:none;" href="/crud/category/{{$data['kategoria']}}/delete/{{$zestaw->id}}" title="Usuń rekord" data-toggle="popover" data-trigger="hover" data-content="Ten rekord będzie usunięty z bazy danych!">
                             <i class="fa fa-times-circle" aria-hidden="true"></i>
                         </a>
-                            <a style="text-decoration:none;" href="/projekt/public/crud/category/{{$data['kategoria']}}/edit/{{$zestaw->id}}" title="Edytuj rekord" data-toggle="popover" data-trigger="hover" data-content="Przejdź do strony dzięki której zmodyfikujesz dany rekord.">
+                            <a style="text-decoration:none;" href="/crud/category/{{$data['kategoria']}}/edit/{{$zestaw->id}}" title="Edytuj rekord" data-toggle="popover" data-trigger="hover" data-content="Przejdź do strony dzięki której zmodyfikujesz dany rekord.">
                             <i class="fa fa-edit" aria-hidden="true"></i>
                             </a>
                         @endif
                             @endif
                     </td>
-                    <td><a href="/projekt/public/category<?php echo '/' ;echo $data['kategoria'] . '/';echo $data['podkategoria'] . '/';echo $zestaw->nazwa_zestawu;?>"><?php echo $zestaw->nazwa_zestawu?></a></td>
+                    <td><a href="/category<?php echo '/' ;echo $data['kategoria'] . '/';echo $data['podkategoria'] . '/';echo $zestaw->nazwa_zestawu;?>"><?php echo $zestaw->nazwa_zestawu?></a></td>
                     <td><?php echo $zestaw->jezyk1?></td>
                     <td><?php echo $zestaw->jezyk2?></td>
                     <td><?php echo $zestaw->ilosc_slowek?></td>
@@ -291,15 +291,15 @@
                 @foreach ($data['zestawyPrywatne'] as $zestaw)
                     <tr>
                         <td>
-                            <a style="text-decoration:none;" href="/projekt/public/crud/category/{{$data['kategoria']}}/delete/{{$zestaw->id}}" title="Usuń rekord" data-toggle="popover" data-trigger="hover" data-content="Ten rekord będzie usunięty z bazy danych!">
+                            <a style="text-decoration:none;" href="/crud/category/{{$data['kategoria']}}/delete/{{$zestaw->id}}" title="Usuń rekord" data-toggle="popover" data-trigger="hover" data-content="Ten rekord będzie usunięty z bazy danych!">
                                 <i class="fa fa-times-circle" aria-hidden="true"></i>
                             </a>
-                            <a style="text-decoration:none;" href="/projekt/public/crud/category/{{$data['kategoria']}}/edit/{{$zestaw->id}}" title="Edytuj rekord" data-toggle="popover" data-trigger="hover" data-content="Przejdź do strony dzięki której zmodyfikujesz dany rekord.">
+                            <a style="text-decoration:none;" href="/crud/category/{{$data['kategoria']}}/edit/{{$zestaw->id}}" title="Edytuj rekord" data-toggle="popover" data-trigger="hover" data-content="Przejdź do strony dzięki której zmodyfikujesz dany rekord.">
                                 <i class="fa fa-edit" aria-hidden="true"></i>
                             </a>
 
                         </td>
-                        <td><a href="/projekt/public/category<?php echo '/' ;echo $data['kategoria'] . '/';echo $data['podkategoria'] . '/';echo $zestaw->nazwa_zestawu;?>"><?php echo $zestaw->nazwa_zestawu?></a></td>
+                        <td><a href="/category<?php echo '/' ;echo $data['kategoria'] . '/';echo $data['podkategoria'] . '/';echo $zestaw->nazwa_zestawu;?>"><?php echo $zestaw->nazwa_zestawu?></a></td>
                         <td><?php echo $zestaw->jezyk1?></td>
                         <td><?php echo $zestaw->jezyk2?></td>
                         <td><?php echo $zestaw->ilosc_slowek?></td>

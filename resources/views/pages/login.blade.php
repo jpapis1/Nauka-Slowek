@@ -1,6 +1,6 @@
 @extends('layout.app')
 @section('customCSS')
-<link rel="stylesheet" type="text/css" href="../public/css/signin.css">
+<link rel="stylesheet" type="text/css" href="../css/signin.css">
 @endsection
 @section('content')
     <body class="text-center">

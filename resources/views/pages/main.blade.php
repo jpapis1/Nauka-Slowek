@@ -1,12 +1,12 @@
 @extends('layout.app')
 @section('customCSS')
-    <link rel="stylesheet" type="text/css" href="/projekt/public/css/main.css">
+    <link rel="stylesheet" type="text/css" href="/css/main.css">
 @endsection
 @section('content')
 
 <body>
 <nav class="navbar navbar-expand-md navbar-dark bg-dark fixed-top">
-    <a class="navbar-brand" href="/projekt/public">Nauka Słówek</a>
+    <a class="navbar-brand" href="">Nauka Słówek</a>
     <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarsExampleDefault" aria-controls="navbarsExampleDefault" aria-expanded="false" aria-label="Toggle navigation">
         <span class="navbar-toggler-icon"></span>
     </button>
@@ -18,10 +18,10 @@
             <form class="form-inline my-2 my-lg-0">
             <ul class="navbar-nav mr-auto">
                 <li class="nav-item">
-                    <a class="nav-link" href="/projekt/public/profile">{{'Profil ' . session('loggedUser')->login}}</a>
+                    <a class="nav-link" href="/profile">{{'Profil ' . session('loggedUser')->login}}</a>
                 </li>
                 <li class="nav-item">
-                    <a class="nav-link" href="/projekt/public/logout">Wyloguj się</a>
+                    <a class="nav-link" href="/logout">Wyloguj się</a>
                 </li>
 
             </ul>
@@ -30,10 +30,10 @@
         <form class="form-inline my-2 my-lg-0">
             <ul class="navbar-nav mr-auto">
                 <li class="nav-item">
-                    <a class="nav-link" href="/projekt/public/register">Zarejestruj się</a>
+                    <a class="nav-link" href="/register">Zarejestruj się</a>
                 </li>
                 <li class="nav-item">
-                    <a class="nav-link" href="/projekt/public/login">Zaloguj się</a>
+                    <a class="nav-link" href="/login">Zaloguj się</a>
                 </li>
 
             </ul>
@@ -64,7 +64,7 @@
         foreach ($kategorie as $kategoria) {
             ?>
             <tr>
-                <td><a href="/projekt/public/category/<?php echo $kategoria->nazwa?>"><?php echo $kategoria->nazwa?></a></td>
+                <td><a href="/category/<?php echo $kategoria->nazwa?>"><?php echo $kategoria->nazwa?></a></td>
                 <td><?php echo $kategoria->opis;?></td>
             </tr>
             <?php
