@@ -16,7 +16,7 @@ class CreateRolaTable extends Migration
         Schema::create('rola', function (Blueprint $table) {
             $table->increments('id');
             $table->string('nazwa',50);
-            $table->string('opis');
+            $table->string('opis',500);
         });
     }
 
