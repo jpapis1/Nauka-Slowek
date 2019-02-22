@@ -19,8 +19,8 @@ class KontoTableSeeder extends Seeder
             'email' => 'admin@edarkt.pl',
             'login' => 'admin',
             'haslo' => password_hash('tajneAdmin',PASSWORD_BCRYPT),
-            'created_at' => time(),
-            'updated_at' => time()
+            'created_at' => Carbon::now(),
+            'updated_at' => Carbon::now()
         ]);
         DB::table('konto')->insert([
 
@@ -30,8 +30,8 @@ class KontoTableSeeder extends Seeder
             'email' => 'stanislaw.wielowiejski@edarkt.pl',
             'login' => 'superRedaktor',
             'haslo' => password_hash('tajneSuperRedaktor',PASSWORD_BCRYPT),
-            'created_at' => time(),
-            'updated_at' => time()
+            'created_at' => Carbon::now(),
+            'updated_at' => Carbon::now()
         ]);
         DB::table('konto')->insert([
 
@@ -41,8 +41,8 @@ class KontoTableSeeder extends Seeder
             'email' => 'jerzy@edarkt.pl',
             'login' => 'redaktor',
             'haslo' => password_hash('tajneRedaktor',PASSWORD_BCRYPT),
-            'created_at' => time(),
-            'updated_at' => time()
+            'created_at' => Carbon::now(),
+            'updated_at' => Carbon::now()
         ]);
         DB::table('konto')->insert([
 
@@ -52,8 +52,8 @@ class KontoTableSeeder extends Seeder
             'email' => 'janusz.ped@edarkt.pl',
             'login' => 'standardowy',
             'haslo' => password_hash('tajneStandardowe',PASSWORD_BCRYPT),
-            'created_at' => time(),
-            'updated_at' => time()
+            'created_at' => Carbon::now(),
+            'updated_at' => Carbon::now()
         ]);
     }
 }
