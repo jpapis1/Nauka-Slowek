@@ -1,12 +1,12 @@
 @extends('layout.app')
 @section('customCSS')
-    <link rel="stylesheet" type="text/css" href="../public/css/main.css">
+    <link rel="stylesheet" type="text/css" href="../css/main.css">
 @endsection
 @section('content')
 
     <body>
     <nav class="navbar navbar-expand-md navbar-dark bg-dark fixed-top">
-        <a class="navbar-brand" href="">Nauka Słówek</a>
+        <a class="navbar-brand" href="/">Nauka Słówek</a>
         <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarsExampleDefault" aria-controls="navbarsExampleDefault" aria-expanded="false" aria-label="Toggle navigation">
             <span class="navbar-toggler-icon"></span>
         </button>
