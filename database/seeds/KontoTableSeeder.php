@@ -18,7 +18,9 @@ class KontoTableSeeder extends Seeder
             'nazwisko' => 'Papis',
             'email' => 'admin@edarkt.pl',
             'login' => 'admin',
-            'haslo' => password_hash('tajneAdmin',PASSWORD_BCRYPT)
+            'haslo' => password_hash('tajneAdmin',PASSWORD_BCRYPT),
+            'created_at' => time(),
+            'updated_at' => time()
         ]);
         DB::table('konto')->insert([
 
@@ -27,7 +29,9 @@ class KontoTableSeeder extends Seeder
             'nazwisko' => 'Wielowiejski',
             'email' => 'stanislaw.wielowiejski@edarkt.pl',
             'login' => 'superRedaktor',
-            'haslo' => password_hash('tajneSuperRedaktor',PASSWORD_BCRYPT)
+            'haslo' => password_hash('tajneSuperRedaktor',PASSWORD_BCRYPT),
+            'created_at' => time(),
+            'updated_at' => time()
         ]);
         DB::table('konto')->insert([
 
@@ -36,7 +40,9 @@ class KontoTableSeeder extends Seeder
             'nazwisko' => 'Nowak',
             'email' => 'jerzy@edarkt.pl',
             'login' => 'redaktor',
-            'haslo' => password_hash('tajneRedaktor',PASSWORD_BCRYPT)
+            'haslo' => password_hash('tajneRedaktor',PASSWORD_BCRYPT),
+            'created_at' => time(),
+            'updated_at' => time()
         ]);
         DB::table('konto')->insert([
 
@@ -45,7 +51,9 @@ class KontoTableSeeder extends Seeder
             'nazwisko' => 'Pędziwiatr',
             'email' => 'janusz.ped@edarkt.pl',
             'login' => 'standardowy',
-            'haslo' => password_hash('tajneStandardowe',PASSWORD_BCRYPT)
+            'haslo' => password_hash('tajneStandardowe',PASSWORD_BCRYPT),
+            'created_at' => time(),
+            'updated_at' => time()
         ]);
     }
 }
