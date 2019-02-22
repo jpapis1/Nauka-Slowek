@@ -1,12 +1,12 @@
 @extends('layout.app')
 @section('customCSS')
-    <link rel="stylesheet" type="text/css" href="/projekt/public/css/main.css">
+    <link rel="stylesheet" type="text/css" href="/css/main.css">
 @endsection
 @section('content')
 
     <body>
     <nav class="navbar navbar-expand-md navbar-dark bg-dark fixed-top">
-        <a class="navbar-brand" href="/projekt/public">Nauka Słówek</a>
+        <a class="navbar-brand" href="">Nauka Słówek</a>
         <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarsExampleDefault" aria-controls="navbarsExampleDefault" aria-expanded="false" aria-label="Toggle navigation">
             <span class="navbar-toggler-icon"></span>
         </button>
@@ -18,10 +18,10 @@
                 <form class="form-inline my-2 my-lg-0">
                     <ul class="navbar-nav mr-auto">
                         <li class="nav-item">
-                            <a class="nav-link" href="/projekt/public/profile">{{'Profil ' . session('loggedUser')->login}}</a>
+                            <a class="nav-link" href="/profile">{{'Profil ' . session('loggedUser')->login}}</a>
                         </li>
                         <li class="nav-item">
-                            <a class="nav-link" href="/projekt/public/logout">Wyloguj się</a>
+                            <a class="nav-link" href="/logout">Wyloguj się</a>
                         </li>
 
                     </ul>
@@ -30,10 +30,10 @@
                 <form class="form-inline my-2 my-lg-0">
                     <ul class="navbar-nav mr-auto">
                         <li class="nav-item">
-                            <a class="nav-link" href="/projekt/public/register">Zarejestruj się</a>
+                            <a class="nav-link" href="/register">Zarejestruj się</a>
                         </li>
                         <li class="nav-item">
-                            <a class="nav-link" href="/projekt/public/login">Zaloguj się</a>
+                            <a class="nav-link" href="/login">Zaloguj się</a>
                         </li>
 
                     </ul>
@@ -52,25 +52,25 @@
                 <p></p>
             <ul class="nav nav-tabs">
                 <li class="nav-item">
-                    <a class="nav-link active" href="/projekt/public/adminPanel/konta">Konta</a>
+                    <a class="nav-link active" href="/adminPanel/konta">Konta</a>
                 </li>
                 <li class="nav-item">
-                    <a class="nav-link" href="/projekt/public/adminPanel/kategorie">Kategorie</a>
+                    <a class="nav-link" href="/adminPanel/kategorie">Kategorie</a>
                 </li>
                 <li class="nav-item">
-                    <a class="nav-link" href="/projekt/public/adminPanel/podkategorie">Podkategorie</a>
+                    <a class="nav-link" href="/adminPanel/podkategorie">Podkategorie</a>
                 </li>
                 <li class="nav-item">
-                    <a class="nav-link" href="/projekt/public/adminPanel/zestawy">Zestawy</a>
+                    <a class="nav-link" href="/adminPanel/zestawy">Zestawy</a>
                 </li>
                 <li class="nav-item">
-                    <a class="nav-link" href="/projekt/public/adminPanel/jezyki">Jezyki</a>
+                    <a class="nav-link" href="/adminPanel/jezyki">Jezyki</a>
                 </li>
                 <li class="nav-item">
-                    <a class="nav-link" href="/projekt/public/adminPanel/wyniki">Wyniki</a>
+                    <a class="nav-link" href="/adminPanel/wyniki">Wyniki</a>
                 </li>
                 <li class="nav-item">
-                    <a class="nav-link" href="/projekt/public/adminPanel/role">Role</a>
+                    <a class="nav-link" href="/adminPanel/role">Role</a>
                 </li>
             </ul>
         </div>
