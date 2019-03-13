@@ -43,4 +43,8 @@ heroku config:set APP_KEY=[tutaj wpisać APP_KEY wygenerowany z poprzedniego pol
 ## Link do aplikacji
 https://nauka-slowek.herokuapp.com/
 
-
+## Screenshots
+<img src="screenshots/sc1.png"  alt="Screenshot"/>
+<img src="screenshots/sc2.png"  alt="Screenshot"/>
+<img src="screenshots/sc3.png"  alt="Screenshot"/>
+<img src="screenshots/sc4.png"  alt="Screenshot"/>
